@@ -1,3 +1,3 @@
-FROM mongo:8
+FROM mongo:9
 COPY *.js /docker-entrypoint-initdb.d/
 
