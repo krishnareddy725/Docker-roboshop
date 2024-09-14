@@ -27,5 +27,18 @@ services:
       - catalogue
     networks:
       - default
+
+redis:
+ image: redis
+ 
+user:
+ image: user:v1
+ container-name: user
+ depends_on:
+   - redis
+   - mongodb
+
+
+
         
     
