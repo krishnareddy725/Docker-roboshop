@@ -30,7 +30,7 @@ services:
 
 redis:
  image: redis
- 
+ container-name: redis
 user:
  image: user:v1
  container-name: user
