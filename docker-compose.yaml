@@ -29,7 +29,8 @@ services:
       - default
 
 redis:
-
+ image: redis
+ container-name: redis
 
 user:
  image: user:v1
@@ -37,6 +38,13 @@ user:
  depends_on:
    - redis
    - mongodb
+
+cart:
+ image: cart:v1
+ container-name: cart
+ depends_on:
+   - redis
+   - catalogue
 
 
 
