@@ -46,6 +46,9 @@ cart:
    - redis
    - catalogue
 
+mysql:
+ image: mysql:v1
+ container-name: mysql
 
 
         
