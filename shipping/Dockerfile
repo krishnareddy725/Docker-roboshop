@@ -1,14 +1,13 @@
 #
 # Build
 #
-FROM maven AS build
-
-RUN apt-get update && apt-get -y install maven
+FROM maven:3.8.6-openjdk-8 AS build
 
 WORKDIR /opt/shipping
 
 COPY pom.xml /opt/shipping/
 RUN mvn dependency:resolve
+
 COPY src /opt/shipping/src/
 RUN mvn package
 
